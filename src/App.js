@@ -1,7 +1,17 @@
+import React from 'react';
+
+import { Header } from './components';
+import { Home, Cart } from './pages';
+import { Route } from 'react-router-dom';
+
 function App() {
   return (
-    <div>
-      <h1>Hello Word</h1>
+    <div className="wrapper">
+      <Header />
+      <div className="content">
+        <Route path="/" component={Home} exact />
+        <Route path="/cart" component={Cart} exact />
+      </div>
     </div>
   );
 }

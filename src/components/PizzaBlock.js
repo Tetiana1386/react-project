@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '../Button';
-
+import Button from './Button';
 import classNames from 'classnames';
 
 function PizzaBlock({
@@ -75,7 +74,7 @@ function PizzaBlock({
         </ul>
       </div>
       <div className="pizza-block__bottom">
-        <div className="pizza-block__price">от {price} ₽</div>
+        <div className="pizza-block__price">от {price} грн</div>
         <Button onClick={onAddPizza} className="button--add" outline>
           <svg
             width="12"

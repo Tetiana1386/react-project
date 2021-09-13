@@ -1,17 +1,22 @@
-import Loader from 'react-loader-spinner';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import ContentLoader from 'react-content-loader';
 
 function LoaderComponent() {
   return (
-    <div className="overlay">
-      <Loader
-        type="ThreeDots"
-        color="#00BFFF"
-        height={100}
-        width={100}
-        timeout={0}
-      />
-    </div>
+    <ContentLoader
+      className="pizza-block"
+      speed={2}
+      width={280}
+      height={460}
+      viewBox="0 0 280 460"
+      backgroundColor="#f3f3f3"
+      foregroundColor="#ecebeb"
+    >
+      <circle cx="132" cy="142" r="115" />
+      <rect x="0" y="273" rx="6" ry="6" width="280" height="26" />
+      <rect x="0" y="310" rx="6" ry="6" width="280" height="84" />
+      <rect x="0" y="418" rx="6" ry="6" width="91" height="31" />
+      <rect x="137" y="408" rx="25" ry="25" width="140" height="46" />
+    </ContentLoader>
   );
 }
 
