@@ -1,4 +1,4 @@
-import { React, useState, useRef, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const SortPopup = React.memo(function SortPopup({
@@ -6,8 +6,8 @@ const SortPopup = React.memo(function SortPopup({
   activeSortType,
   onClickSortType,
 }) {
-  const [visiblePopup, setVisiblePopup] = useState(false);
-  const sortRef = useRef();
+  const [visiblePopup, setVisiblePopup] = React.useState(false);
+  const sortRef = React.useRef();
   const activeLabel = items.find(obj => obj.type === activeSortType).name;
 
   const toggleVisiblePopup = () => {
@@ -28,7 +28,7 @@ const SortPopup = React.memo(function SortPopup({
     setVisiblePopup(false);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     document.body.addEventListener('click', handleOutsideClick);
   }, []);
 
