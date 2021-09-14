@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 import classNames from 'classnames';
@@ -16,8 +16,8 @@ function PizzaBlock({
   const availableTypes = ['тонкое', 'традиционное'];
   const availableSizes = [26, 30, 40];
 
-  const [activeType, setActiveType] = React.useState(types[0]);
-  const [activeSize, setActiveSize] = React.useState(0);
+  const [activeType, setActiveType] = useState(types[0]);
+  const [activeSize, setActiveSize] = useState(0);
 
   const onSelectType = index => {
     setActiveType(index);
